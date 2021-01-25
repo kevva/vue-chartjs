@@ -8645,10 +8645,17 @@ var VueCharts = {
 
 var generateChart = function generateChart(chartId, chartType) {
   return {
+    name: 'VueCharts',
     props: {
       chartId: {
         default: chartId,
         type: String
+      },
+      data: {
+        type: Object
+      },
+      options: {
+        type: Object
       },
       width: {
         default: 400,

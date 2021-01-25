@@ -2,10 +2,17 @@ import {h, onMounted, onUnmounted, reactive, ref} from 'vue'
 import Chart from 'chart.js'
 
 export const generateChart = (chartId, chartType) => ({
+  name: 'VueCharts',
   props: {
     chartId: {
       default: chartId,
       type: String
+    },
+    data: {
+      type: Object
+    },
+    options: {
+      type: Object
     },
     width: {
       default: 400,
